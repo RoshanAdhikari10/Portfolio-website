@@ -1,202 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maintenance Mode | Roshan Adhikari</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roshan Adhikari | Full-Stack Developer Portfolio</title>
+  <meta content="Portfolio of Roshan Adhikari - Full-Stack Developer, Web Developer, and IT enthusiast from Pokhara, Nepal. Specializing in React, JavaScript, and modern web technologies." name="description">
+  <meta content="Roshan Adhikari, IT student, web development, freelancer, designer, problem-solver, React developer, Full-stack developer, Pokhara" name="keywords">
+  <meta name="theme-color" content="#149ddd"/>
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roshan Adhikari | Full-Stack Developer">
+  <meta property="og:description" content="Portfolio of Roshan Adhikari - Web Developer & IT Enthusiast from Pokhara, Nepal">
+  <meta property="og:url" content="https://roshanadhikari10.github.io/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="p/favicon.png">
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top left, #1a1a2e, #0f0f1a 70%);
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #00ffff, #ff00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 10px;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00ffff; }
-      to { text-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff; }
-    }
-
-    .worker {
-      position: relative;
-      width: 140px;
-      height: 140px;
-      margin: 30px 0;
-    }
-
-    .gear {
-      position: absolute;
-      border: 8px solid #00ffff;
-      border-radius: 50%;
-      animation: spin 6s linear infinite;
-    }
-
-    .gear.one {
-      width: 80px;
-      height: 80px;
-      top: 0;
-      left: 30px;
-      animation-duration: 8s;
-    }
-
-    .gear.two {
-      width: 50px;
-      height: 50px;
-      bottom: 0;
-      right: 20px;
-      animation-direction: reverse;
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .countdown {
-      display: flex;
-      gap: 20px;
-      font-size: 1.4rem;
-      margin-top: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .countdown div {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      border-radius: 12px;
-      padding: 10px 20px;
-      min-width: 90px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-    }
-
-    .countdown span {
-      display: block;
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #00ffff;
-    }
-
-    .glow-line {
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #00ffff, transparent);
-      animation: moveLine 3s linear infinite;
-      bottom: 30%;
-    }
-
-    @keyframes moveLine {
-      from { left: -100%; }
-      to { left: 100%; }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .countdown {
-        gap: 10px;
-      }
-      .countdown div {
-        padding: 8px 12px;
-        min-width: 70px;
-      }
-    }
-  </style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <div class="worker">
-    <div class="gear one"></div>
-    <div class="gear two"></div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="spinner"></div>
   </div>
 
-  <h1>🚧 Site Under Maintenance 🚧</h1>
-  <p>Roshan is upgrading your experience. We’ll be back soon!</p>
+  <!-- ============ Sidebar / Header ============ -->
+  <aside id="sidebar">
+    <div class="profile text-center">
+      <div class="avatar">
+        <img src="p/1728828277786.jpg" alt="Roshan Adhikari - Full Stack Developer" />
+      </div>
 
-  <p>Estimated Time Remaining:</p>
+      <h1 class="name"><a href="#hero" style="color: inherit; text-decoration: none;">Roshan Adhikari</a></h1>
+      <p class="tagline">Full-Stack Developer • IT Enthusiast</p>
+      <div class="social">
+        <a href="https://www.facebook.com/chhetri.rosun" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/chhetri.rosun/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/roshan-adhikari-80b883320/" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/RoshanAdhikari10" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+      </div>
+      <div class="sidebar-actions">
+        <a class="btn btn-primary w-100 mb-2" href="assets/Roshan_Adhikari_CV.pdf" download>Download CV</a>
+        <button id="theme-toggle" class="btn btn-outline-light w-100"><i class="bx bx-moon me-1"></i><span>Dark Mode</span></button>
+      </div>
+    </div>
 
-  <div class="countdown">
-    <div><span id="days">0</span>Days</div>
-    <div><span id="hours">0</span>Hrs</div>
-    <div><span id="minutes">0</span>Min</div>
-    <div><span id="seconds">0</span>Sec</div>
-  </div>
+    <nav class="nav flex-column mt-4" id="navbar">
+      <a class="nav-link scrollto active" href="#hero"><i class="bx bx-home-alt-2"></i><span>Home</span></a>
+      <a class="nav-link scrollto" href="#about"><i class="bx bx-user"></i><span>About</span></a>
+      <a class="nav-link scrollto" href="#skills"><i class="bx bx-code-alt"></i><span>Skills</span></a>
+      <a class="nav-link scrollto" href="#projects"><i class="bx bx-layer"></i><span>Projects</span></a>
+      <a class="nav-link scrollto" href="#experience"><i class="bx bx-briefcase"></i><span>Experience</span></a>
+      <a class="nav-link scrollto" href="#contact"><i class="bx bx-envelope"></i><span>Contact</span></a>
+    </nav>
+  </aside>
 
-  <div class="glow-line"></div>
-  <footer>© 2025 Roshan Adhikari | All Rights Reserved</footer>
+  <button class="mobile-nav-toggle d-lg-none" aria-label="Toggle navigation">
+    <i class="bx bx-menu"></i>
+  </button>
 
-  <script>
-    // === Countdown Timer (30 days) ===
-    const savedDate = localStorage.getItem("maintenance_end");
-    let targetDate;
+  <!-- ============ Main Content ============ -->
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="container" data-aos="fade-in">
+        <div class="badge">Open to Work</div>
+        <h1 class="display-4 fw-bold">Hi, I'm Roshan.</h1>
+        <p class="lead">I'm <span class="typed" data-typed-items="a Web Developer,a Designer,a Freelancer,a Problem Solver"></span></p>
+        <div class="mt-4 d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#contact" class="btn btn-primary btn-lg">Hire Me</a>
+          <a href="assets/Roshan_Adhikari_CV.pdf" download class="btn btn-outline-light btn-lg">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
 
-    if (savedDate && new Date(savedDate) > new Date()) {
-      targetDate = new Date(savedDate);
-    } else {
-      targetDate = new Date();
-      targetDate.setDate(targetDate.getDate() + 30); // 1 month
-      localStorage.setItem("maintenance_end", targetDate);
-    }
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="about-img">
+            <img src="p/1728828277792.jpg" alt="Roshan Adhikari" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <h2 class="section-title">About Me</h2>
+          <p class="mb-3">Tech enthusiast from Pokhara with a knack for building clean, accessible web experiences. I enjoy solving real problems with modern stacks and deploying reliable apps. Currently diving deep into full-stack development with React, Node.js, and exploring cloud technologies.</p>
+          <p class="mb-3">I believe in writing clean, maintainable code and creating user experiences that make a difference. When I'm not coding, you'll find me exploring new technologies, contributing to open source, or helping fellow developers in the community.</p>
+          <ul class="about-list">
+            <li><strong>Birthday:</strong> 17 March 2004</li>
+            <li><strong>City:</strong> Pokhara, Nepal</li>
+            <li><strong>Phone:</strong> +977-9766009112</li>
+            <li><strong>Email:</strong> chhetrirosun@gmail.com</li>
+            <li><strong>Freelance:</strong> Available</li>
+            <li><strong>Age:</strong> <span id="age"></span></li>
+          </ul>
+          <div class="mt-3">
+            <a class="btn btn-primary" href="assets/Roshan_Adhikari_CV.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+    <!-- Skills -->
+    <section id="skills" class="section section-bg">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Skills</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+          My expertise across frontend, backend, and other tech stacks.
+        </p>
 
-      if (distance <= 0) {
-        localStorage.removeItem("maintenance_end");
-        window.location.href = "https://roshanadhikari25.com.np";
-        return;
-      }
+        <div class="row g-4 skills-content">
+          <!-- Column 1 -->
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-html5 me-2"></i>HTML</span><span>90%</span>
+              </div>
+              <div class="progress">
+                <span class="bar html" data-value="90"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-css3 me-2"></i>CSS</span><span>95%</span>
+              </div>
+              <div class="progress">
+                <span class="bar css" data-value="95"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-javascript me-2"></i>JavaScript</span><span>85%</span>
+              </div>
+              <div class="progress">
+                <span class="bar js" data-value="85"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-react me-2"></i>React Native</span><span>80%</span>
+              </div>
+              <div class="progress">
+                <span class="bar react" data-value="80"></span>
+              </div>
+            </div>
+          </div>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          <!-- Column 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-java me-2"></i>Java</span><span>85%</span>
+              </div>
+              <div class="progress">
+                <span class="bar java" data-value="85"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxl-python me-2"></i>Python</span><span>80%</span>
+              </div>
+              <div class="progress">
+                <span class="bar python" data-value="80"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bxs-file-code me-2"></i>C#</span><span>85%</span>
+              </div>
+              <div class="progress">
+                <span class="bar csharp" data-value="85"></span>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bx bx-server me-2"></i>System Administration</span><span>80%</span>
+              </div>
+              <div class="progress">
+                <span class="bar sysadmin" data-value="80"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    }
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
+      <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Selected work showcasing code quality and product thinking.</p>
 
-    setInterval(updateCountdown, 1000);
-  </script>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <article class="project-card">
+            <div class="project-img">
+              <i class="bx bx-mobile-alt"></i>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Quiz App</h3>
+              <p class="project-desc">Frontend Quiz App with React Native and Tailwind CSS featuring animations, timer logic, and sound effects.</p>
+              <div class="badges">
+                <span>React Native</span><span>Tailwind CSS</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/Quiz-App" target="_blank">Code</a>
+                <a class="btn btn-outline-light btn-sm" href="https://drive.google.com/file/d/1rQACc7ZgPsUsdtRGShPQWFNJFJoqEjtG/view?usp=drive_link" target="_blank">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <article class="project-card">
+            <div class="project-img">
+              <i class="bx bx-restaurant"></i>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Food Ordering System – FoodSathi</h3>
+              <p class="project-desc">
+                A modern and responsive food ordering template featuring dark mode, smooth AOS animations, and clean UI/UX with SEO-optimized structure.
+              </p>
+              <div class="badges">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/FoodSathi" target="_blank">Code</a>
+                <a class="btn btn-outline-light btn-sm" href="https://roshanadhikari10.github.io/FoodSathi/" target="_blank">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <article class="project-card">
+            <div class="project-img icon-box">
+              <i class="bx bx-joystick"></i>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Ping Pong Game</h3>
+              <p class="project-desc">
+                A fast, smooth and interactive classic Pong game built using HTML, CSS, and JavaScript with sound effects and AI opponent.
+              </p>
+              <div class="badges">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/roshanadhikari10/ping-pong-game" target="_blank">
+                  Code
+                </a>
+                <a class="btn btn-outline-light btn-sm" href="https://roshanadhikari10.github.io/Ping-pong-game/" target="_blank">
+                  Live
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-bg">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Mobile Developer Intern</h3>
+              <span class="time">Jan 2025 – Mar 2025 • Onsite</span>
+              <p>Contributed to the design and development of production-ready mobile applications, focusing on performance, UI/UX quality, and clean modular code.</p>
+              <ul>
+                <li>Built a fully functional Quiz App with animations, timer logic, leaderboard, and sound effects.</li>
+                <li>Developed an AI Assistant App with task management, news feed, and intelligent UI interactions.</li>
+                <li>Implemented reusable components, optimized navigation, and improved user experience.</li>
+                <li>Worked with React Native CLI, Tailwind CSS, and modern mobile UI patterns.</li>
+                <li>Collaborated in an agile environment to deliver features under tight deadlines.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Contact</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Let's build something great. I'm quick on replies.</p>
+
+        <div class="row g-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-5">
+            <div class="contact-card">
+              <div class="row g-3">
+                <div class="col-12"><i class="bx bx-current-location me-2"></i>Pokhara-13, Nepal</div>
+                <div class="col-12"><i class="bx bx-envelope me-2"></i>chhetrirosun@gmail.com</div>
+                <div class="col-12"><i class="bx bx-phone me-2"></i>+977-9766009112</div>
+              </div>
+              <div class="d-flex gap-2 mt-3 flex-wrap">
+                <a class="btn btn-primary" href="https://wa.me/9779766009112" target="_blank"><i class="bx bxl-whatsapp me-1"></i>WhatsApp</a>
+                <a class="btn btn-outline-light" href="assets/Roshan_Adhikari_CV.pdf" download><i class="bx bx-download me-1"></i>Resume</a>
+              </div>
+              <div class="map mt-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d205.71011684671976!2d84.0511278392731!3d28.221621438983547!2m3!1f180!2f0!3f0!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2snp!4v1728823691577!5m2!1sen!2snp" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form-container">
+              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="11c07a38-cb35-4475-aaa6-1501560eeeb4" />
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <div id="form-status" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="mb-0">&copy; <span id="year"></span> Roshan Adhikari • All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="bx bx-chevron-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>
 </html>
