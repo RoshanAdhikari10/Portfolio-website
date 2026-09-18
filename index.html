@@ -1,363 +1,605 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roshan Adhikari | Full-Stack Developer Portfolio</title>
-  <meta content="Portfolio of Roshan Adhikari - Full-Stack Developer, Web Developer, and IT enthusiast from Pokhara, Nepal. Specializing in React, JavaScript, and modern web technologies." name="description">
-  <meta content="Roshan Adhikari, IT student, web development, freelancer, designer, problem-solver, React developer, Full-stack developer, Pokhara" name="keywords">
-  <meta name="theme-color" content="#149ddd"/>
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Roshan Adhikari | Full-Stack Developer">
-  <meta property="og:description" content="Portfolio of Roshan Adhikari - Web Developer & IT Enthusiast from Pokhara, Nepal">
-  <meta property="og:url" content="https://roshanadhikari10.github.io/">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="p/favicon.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Roshan Adhikari — Web &amp; Mobile Developer, Pokhara Nepal</title>
+<meta name="description" content="BScIT graduate and web & mobile developer in Pokhara, Nepal. Builds responsive websites and React Native apps with JavaScript, Firebase, Java and clean, maintainable code." />
+<meta name="author" content="Roshan Adhikari" />
+<meta name="theme-color" content="#080b12" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-  <script src="main.js" defer></script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Roshan Adhikari — Web & Mobile Developer" />
+<meta property="og:description" content="BScIT graduate building responsive websites and React Native mobile apps from Pokhara, Nepal." />
+<meta property="og:image" content="assets/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="assets/og-image.jpg" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Roshan Adhikari",
+  "jobTitle":"Web & Mobile Developer",
+  "image":"assets/og-image.jpg",
+  "email":"chhetrirosun@gmail.com",
+  "telephone":"+977-9766009112",
+  "address":{"@type":"PostalAddress","addressLocality":"Pokhara","addressCountry":"NP"},
+  "sameAs":[
+    "https://github.com/RoshanAdhikari10",
+    "https://www.linkedin.com/in/roshan-adhikari-80b883320/",
+    "https://www.instagram.com/chhetri.rosun/"
+  ]
+}
+</script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="spinner"></div>
+
+<!-- preloader -->
+<div id="preloader">
+  <div class="pl-mark pl-photo"><img src="assets/roshan-avatar.jpg" alt="" onerror="this.onerror=null;this.src='assets/roshan-avatar.jpg'" /></div>
+  <div class="pl-bar"><span id="plFill"></span></div>
+  <div class="pl-num mono" id="plNum">0%</div>
+</div>
+
+<div class="noise" aria-hidden="true"></div>
+<div id="progress"></div>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu" aria-label="Close menu"><i class='bx bx-x'></i></button>
+  <a href="#about" class="scrollto">About</a>
+  <a href="#services" class="scrollto">Services</a>
+  <a href="#skills" class="scrollto">Skills</a>
+  <a href="#projects" class="scrollto">Projects</a>
+  <a href="#experience" class="scrollto">Experience</a>
+  <a href="#process" class="scrollto">Process</a>
+  <a href="#contact" class="scrollto">Contact</a>
+</div>
+
+<!-- sidebar -->
+<nav id="nav" aria-label="Main">
+  <a href="#hero" class="logo scrollto" aria-label="Home">
+    <span class="mark mark-photo"><img src="assets/roshan-avatar.jpg" alt="Roshan Adhikari" width="44" height="44" onerror="this.onerror=null;this.src='assets/roshan-avatar.jpg'" /></span>
+    <span class="full-name">Roshan Adhikari<span>Web &amp; Mobile Dev</span></span>
+  </a>
+  <div class="nav-status"><span class="pill"><span class="dot"></span> Available for work</span></div>
+
+  <div class="nav-links" id="navLinks">
+    <span class="nav-indicator" id="navIndicator"></span>
+    <a href="#about" class="scrollto"><i class='bx bx-user'></i>About<span class="idx mono">01</span></a>
+    <a href="#services" class="scrollto"><i class='bx bx-layer'></i>Services<span class="idx mono">02</span></a>
+    <a href="#skills" class="scrollto"><i class='bx bx-code-alt'></i>Skills<span class="idx mono">03</span></a>
+    <a href="#projects" class="scrollto"><i class='bx bx-folder'></i>Projects<span class="idx mono">04</span></a>
+    <a href="#experience" class="scrollto"><i class='bx bx-briefcase'></i>Experience<span class="idx mono">05</span></a>
+    <a href="#process" class="scrollto"><i class='bx bx-git-branch'></i>Process<span class="idx mono">06</span></a>
+    <a href="#contact" class="scrollto"><i class='bx bx-envelope'></i>Contact<span class="idx mono">07</span></a>
   </div>
 
-  <!-- ============ Sidebar / Header ============ -->
-  <aside id="sidebar">
-    <div class="profile text-center">
-      <div class="avatar">
-        <img src="p/1728828277786.jpg" alt="Roshan Adhikari - Full Stack Developer" />
+  <div class="nav-foot">
+    <a href="#contact" class="btn btn-primary btn-sm scrollto">Hire me</a>
+    <div class="nav-util">
+      <button class="icon-btn" id="themeToggle" aria-label="Switch theme"><i class='bx bx-sun'></i></button>
+      <button class="kbd" id="palTrigger" aria-label="Open quick search">⌘K search</button>
+    </div>
+    <div class="f-social">
+      <a href="https://github.com/RoshanAdhikari10" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+      <a href="https://www.linkedin.com/in/roshan-adhikari-80b883320/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://www.instagram.com/chhetri.rosun/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.facebook.com/chhetri.rosun" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+    </div>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class='bx bx-menu'></i></button>
+</nav>
+
+<!-- command palette -->
+<div id="palette" role="dialog" aria-modal="true" aria-label="Quick search">
+  <div class="pal-box">
+    <input type="text" id="palInput" placeholder="Jump to a section, project, or link…" autocomplete="off" />
+    <div class="pal-list" id="palList"></div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="grid-bg"></div>
+  <canvas id="bp-canvas"></canvas>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Pokhara, Nepal</div>
+        <h1>Roshan <span class="grad">Adhikari</span></h1>
+        <div class="role-line">I build as a <span class="typed" data-typed-items="Web Developer,  Mobile App Developer, BScIT Graduate"></span></div>
+        <p class="lead">I turn ideas into shipped products — responsive websites and Android apps built with React, React Native, Firebase and Java, with code that stays readable six months later.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary scrollto">See my work</a>
+          <a href="assets/Roshan_Adhikari_CV.pdf" download class="btn btn-ghost"><i class='bx bx-download'></i> Download CV</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong data-count="3" data-suffix="">0</strong><span>Shipped projects</span></div>
+          <div class="stat"><strong data-count="3" data-suffix=" mo">0</strong><span>Industry internship</span></div>
+          <div class="stat"><strong data-count="10" data-suffix="+">0</strong><span>Tools in daily use</span></div>
+        </div>
       </div>
 
-      <h1 class="name"><a href="#hero" style="color: inherit; text-decoration: none;">Roshan Adhikari</a></h1>
-      <p class="tagline">Full-Stack Developer • IT Enthusiast</p>
-      <div class="social">
-        <a href="https://www.facebook.com/chhetri.rosun" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/chhetri.rosun/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/roshan-adhikari-80b883320/" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/RoshanAdhikari10" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+      <div class="terminal reveal" data-d="2">
+        <div class="term-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="name">roshan@pokhara — profile.js</span>
+        </div>
+        <div class="term-body" id="termBody"></div>
       </div>
-      <div class="sidebar-actions">
-        <a class="btn btn-primary w-100 mb-2" href="assets/Roshan_Adhikari_CV.pdf" download>Download CV</a>
-        <button id="theme-toggle" class="btn btn-outline-light w-100"><i class="bx bx-moon me-1"></i><span>Dark Mode</span></button>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="mono">SCROLL</span><span class="line"></span></div>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <figure class="portrait">
+          <div class="grid-bg"></div>
+          <div class="ring"></div>
+          <picture>
+            <source srcset="assets/roshan-portrait.jpg" type="image/jpg">
+            <img src="assets/roshan-portrait.jpg" alt="Roshan Adhikari, web and mobile developer" width="880" height="1100" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption class="portrait-badge mono"><span class="dot"></span>Open to work</figcaption>
+        </figure>
+        <div class="portrait-meta">
+          <div>Based in<strong>Pokhara, NP</strong></div>
+          <div>Status<strong>Open to work</strong></div>
+        </div>
+      </div>
+
+      <div class="about-copy reveal" data-d="1">
+        <div class="eyebrow">About</div>
+        <h2>A developer who reads the blueprint before writing the code.</h2>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="bio" role="tab">Background</button>
+          <button class="tab" data-tab="edu" role="tab">Education</button>
+          <button class="tab" data-tab="stack" role="tab">Toolkit</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-bio">
+          <p>I'm a BScIT graduate from Nepal building across the stack — responsive websites with HTML, CSS and JavaScript, and mobile applications with React Native, Firebase, Java and REST APIs. I'd rather ship a clean, scalable interface than a flashy one that breaks on a mid-range Android phone.</p>
+          <p>Outside of features, you'll find me exploring new tools, contributing to open source, or helping other developers debug their late-night builds. I'm looking for a Web, React Native, Mobile or Software Developer role where I can contribute from day one and keep growing.</p>
+        </div>
+
+        <div class="tab-panel" id="tab-edu">
+          <div class="edu-list">
+            <div class="edu-item">
+              <span class="yr">2021 — 2025</span>
+              <div><h4>BSc. Information Technology</h4><p>Full-stack fundamentals, databases, networking, and software engineering practice.</p></div>
+            </div>
+            <div class="edu-item">
+              <span class="yr">Jan — Mar 2025</span>
+              <div><h4>Mobile Developer Internship</h4><p>Three months of onsite React Native work on production-facing apps.</p></div>
+            </div>
+            <div class="edu-item">
+              <span class="yr">Ongoing</span>
+              <div><h4>Self-directed study</h4><p>Modern React patterns, TypeScript, app performance, and accessible UI.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-stack">
+          <div class="chip-cloud">
+            <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+            <span class="chip">React</span><span class="chip">React Native</span><span class="chip">Tailwind CSS</span>
+            <span class="chip">Firebase</span><span class="chip">REST APIs</span><span class="chip">Java</span>
+            <span class="chip">Python</span><span class="chip">C#</span><span class="chip">Git &amp; GitHub</span>
+            <span class="chip">MySQL</span><span class="chip">Figma</span><span class="chip">Linux</span>
+          </div>
+        </div>
+
+        <div class="fact-grid">
+          <div class="fact"><div class="label">Education</div><div class="value">BScIT Graduate</div></div>
+          <div class="fact"><div class="label">Location</div><div class="value">Pokhara-13, Nepal</div></div>
+          <div class="fact"><div class="label">Phone</div><div class="value">+977-9766009112</div></div>
+          <div class="fact"><div class="label">Email</div><div class="value">chhetrirosun@gmail.com</div></div>
+        </div>
+
+        <div class="about-actions">
+          <a href="assets/Roshan_Adhikari_CV.pdf" download class="btn btn-primary"><i class='bx bx-download'></i> Download resume</a>
+          <a href="#contact" class="btn btn-ghost scrollto">Start a conversation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">What I do</div>
+      <h2>Four kinds of work I take on</h2>
+      <p>From a single landing page to a full Android app — here's where I'm most useful to a team.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-ico"><i class='bx bx-code-block'></i></div>
+        <h3>Website development</h3>
+        <p>Responsive, fast-loading marketing sites and dashboards built from scratch or from a Figma file, tested down to small phones.</p>
+        <ul><li>HTML / CSS / JS</li><li>React</li><li>Tailwind</li></ul>
+      </article>
+      <article class="svc reveal" data-d="1">
+        <div class="svc-ico"><i class='bx bx-mobile-alt'></i></div>
+        <h3>Mobile apps</h3>
+        <p>Cross-platform Android apps in React Native — navigation, offline state, push, and Firebase auth wired up properly.</p>
+        <ul><li>React Native</li><li>Firebase</li><li>Java</li></ul>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <div class="svc-ico"><i class='bx bx-paint'></i></div>
+        <h3>UI implementation</h3>
+        <p>Pixel-accurate translation of a design into reusable components, with keyboard access and reduced-motion support built in.</p>
+        <ul><li>Figma to code</li><li>Design systems</li><li>Accessibility</li></ul>
+      </article>
+      <article class="svc reveal" data-d="3">
+        <div class="svc-ico"><i class='bx bx-wrench'></i></div>
+        <h3>Fixes and upkeep</h3>
+        <p>Debugging a broken build, speeding up a slow page, or adding the feature that got postponed last sprint.</p>
+        <ul><li>Performance</li><li>Bug triage</li><li>Refactors</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Tech stack</div>
+      <h2>Tools I reach for</h2>
+      <p>Frontend, mobile, backend basics, and the systems knowledge that ties it together.</p>
+    </div>
+
+    <svg width="0" height="0" aria-hidden="true"><defs>
+      <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff6b4a"/><stop offset="100%" stop-color="#ffb347"/>
+      </linearGradient>
+    </defs></svg>
+
+    <div class="rings">
+      <div class="ring-card reveal" data-ring="95">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"/><circle class="ring-fg" cx="50" cy="50" r="45"/></svg>
+          <div class="ring-val mono">0%</div>
+        </div>
+        <h4>CSS &amp; layout</h4><small>Flexbox · Grid · animation</small>
+      </div>
+      <div class="ring-card reveal" data-d="1" data-ring="90">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"/><circle class="ring-fg" cx="50" cy="50" r="45"/></svg>
+          <div class="ring-val mono">0%</div>
+        </div>
+        <h4>HTML &amp; semantics</h4><small>Accessible markup · SEO</small>
+      </div>
+      <div class="ring-card reveal" data-d="2" data-ring="85">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"/><circle class="ring-fg" cx="50" cy="50" r="45"/></svg>
+          <div class="ring-val mono">0%</div>
+        </div>
+        <h4>JavaScript</h4><small>ES6+ · async · DOM</small>
+      </div>
+      <div class="ring-card reveal" data-d="3" data-ring="80">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"/><circle class="ring-fg" cx="50" cy="50" r="45"/></svg>
+          <div class="ring-val mono">0%</div>
+        </div>
+        <h4>React Native</h4><small>Navigation · Firebase</small>
       </div>
     </div>
 
-    <nav class="nav flex-column mt-4" id="navbar">
-      <a class="nav-link scrollto active" href="#hero"><i class="bx bx-home-alt-2"></i><span>Home</span></a>
-      <a class="nav-link scrollto" href="#about"><i class="bx bx-user"></i><span>About</span></a>
-      <a class="nav-link scrollto" href="#skills"><i class="bx bx-code-alt"></i><span>Skills</span></a>
-      <a class="nav-link scrollto" href="#projects"><i class="bx bx-layer"></i><span>Projects</span></a>
-      <a class="nav-link scrollto" href="#experience"><i class="bx bx-briefcase"></i><span>Experience</span></a>
-      <a class="nav-link scrollto" href="#contact"><i class="bx bx-envelope"></i><span>Contact</span></a>
-    </nav>
-  </aside>
+    <div class="skill-tabs reveal" id="skillFilter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="backend">Languages</button>
+      <button class="filter-btn" data-filter="tools">Tools</button>
+    </div>
 
-  <button class="mobile-nav-toggle d-lg-none" aria-label="Toggle navigation">
-    <i class="bx bx-menu"></i>
-  </button>
-
-  <!-- ============ Main Content ============ -->
-  <main id="main">
-    <!-- Hero -->
-    <section id="hero" class="section hero">
-      <div class="container" data-aos="fade-in">
-        <div class="badge">Open to Work</div>
-        <h1 class="display-4 fw-bold">Hi, I'm Roshan.</h1>
-        <p class="lead">I'm <span class="typed" data-typed-items="a Web Developer,a Designer,a Freelancer,a Problem Solver"></span></p>
-        <div class="mt-4 d-flex gap-3 justify-content-center flex-wrap">
-          <a href="#contact" class="btn btn-primary btn-lg">Hire Me</a>
-          <a href="assets/Roshan_Adhikari_CV.pdf" download class="btn btn-outline-light btn-lg">Download CV</a>
-        </div>
+    <div class="skills-grid" id="skillsGrid">
+      <div class="gauge" data-value="90" data-cat="frontend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-html5'></i>HTML</div><div class="gauge-pct mono">90%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
       </div>
-      <div class="hero-bg" aria-hidden="true"></div>
-    </section>
+      <div class="gauge" data-value="95" data-cat="frontend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-css3'></i>CSS</div><div class="gauge-pct mono">95%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="85" data-cat="frontend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-javascript'></i>JavaScript</div><div class="gauge-pct mono">85%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="82" data-cat="frontend mobile">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-tailwind-css'></i>Tailwind CSS</div><div class="gauge-pct mono">82%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="80" data-cat="mobile">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-react'></i>React Native</div><div class="gauge-pct mono">80%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="78" data-cat="mobile backend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-firebase'></i>Firebase</div><div class="gauge-pct mono">78%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="85" data-cat="backend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-java'></i>Java</div><div class="gauge-pct mono">85%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="80" data-cat="backend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-python'></i>Python</div><div class="gauge-pct mono">80%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="85" data-cat="backend">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxs-file-code'></i>C#</div><div class="gauge-pct mono">85%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="83" data-cat="tools">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-git'></i>Git &amp; GitHub</div><div class="gauge-pct mono">83%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="80" data-cat="tools">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bx-server'></i>System administration</div><div class="gauge-pct mono">80%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <div class="gauge" data-value="75" data-cat="tools">
+        <div class="gauge-top"><div class="gauge-label"><i class='bx bxl-figma'></i>Figma</div><div class="gauge-pct mono">75%</div></div>
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- About -->
-    <section id="about" class="section container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5" data-aos="fade-right">
-          <div class="about-img">
-            <img src="p/1728828277792.jpg" alt="Roshan Adhikari" loading="lazy" />
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected work</div>
+      <h2>A few things I've shipped</h2>
+      <p>Web and mobile — small in scope, built with the same care I'd bring to production code.</p>
+    </div>
+
+    <div class="skill-tabs reveal" id="projFilter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="game">Games</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="tilt-card reveal" data-cat="mobile">
+        <article class="project-card glass tilt">
+          <span class="corner-tag"></span><span class="corner-tag br"></span>
+          <div class="project-icon"><i class='bx bx-mobile-alt'></i></div>
+          <h3 class="project-title">Quiz App</h3>
+          <p class="project-desc">A mobile quiz with animated transitions, a countdown timer, scoring and sound effects — built to feel snappy on mid-range Android devices.</p>
+          <div class="tag-row"><span class="tag">React Native</span><span class="tag">Tailwind CSS</span></div>
+          <div class="project-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/Quiz-App" target="_blank" rel="noopener">Code</a>
+            <a class="btn btn-ghost btn-sm" href="https://drive.google.com/file/d/1rQACc7ZgPsUsdtRGShPQWFNJFJoqEjtG/view?usp=drive_link" target="_blank" rel="noopener">Demo</a>
+            <button class="link-btn" data-project="quiz">Details</button>
           </div>
-        </div>
-        <div class="col-lg-7" data-aos="fade-left">
-          <h2 class="section-title">About Me</h2>
-          <p class="mb-3">Tech enthusiast from Pokhara with a knack for building clean, accessible web experiences. I enjoy solving real problems with modern stacks and deploying reliable apps. Currently diving deep into full-stack development with React, Node.js, and exploring cloud technologies.</p>
-          <p class="mb-3">I believe in writing clean, maintainable code and creating user experiences that make a difference. When I'm not coding, you'll find me exploring new technologies, contributing to open source, or helping fellow developers in the community.</p>
-          <ul class="about-list">
-            <li><strong>Birthday:</strong> 17 March 2004</li>
-            <li><strong>City:</strong> Pokhara, Nepal</li>
-            <li><strong>Phone:</strong> +977-9766009112</li>
-            <li><strong>Email:</strong> chhetrirosun@gmail.com</li>
-            <li><strong>Freelance:</strong> Available</li>
-            <li><strong>Age:</strong> <span id="age"></span></li>
+        </article>
+      </div>
+
+      <div class="tilt-card reveal" data-d="1" data-cat="web">
+        <article class="project-card glass tilt">
+          <span class="corner-tag"></span><span class="corner-tag br"></span>
+          <div class="project-icon"><i class='bx bx-restaurant'></i></div>
+          <h3 class="project-title">FoodSathi</h3>
+          <p class="project-desc">A responsive food-ordering front end with dark mode, scroll-triggered animation and an SEO-friendly document structure.</p>
+          <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <div class="project-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/FoodSathi" target="_blank" rel="noopener">Code</a>
+            <a class="btn btn-ghost btn-sm" href="https://roshanadhikari10.github.io/FoodSathi/" target="_blank" rel="noopener">Live site</a>
+            <button class="link-btn" data-project="food">Details</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="tilt-card reveal" data-d="2" data-cat="game web">
+        <article class="project-card glass tilt">
+          <span class="corner-tag"></span><span class="corner-tag br"></span>
+          <div class="project-icon"><i class='bx bx-joystick'></i></div>
+          <h3 class="project-title">Ping Pong Game</h3>
+          <p class="project-desc">Classic Pong rebuilt on canvas with sound, difficulty levels and an AI paddle — no libraries, just HTML, CSS and JavaScript.</p>
+          <div class="tag-row"><span class="tag">HTML</span><span class="tag">Canvas</span><span class="tag">JavaScript</span></div>
+          <div class="project-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/roshanadhikari10/ping-pong-game" target="_blank" rel="noopener">Code</a>
+            <a class="btn btn-ghost btn-sm" href="https://roshanadhikari10.github.io/Ping-pong-game/" target="_blank" rel="noopener">Play</a>
+            <button class="link-btn" data-project="pong">Details</button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- project modal -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience</div>
+      <h2>Where I've worked</h2>
+      <p>Short but real — three months onsite shipping React Native features against live deadlines.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-card">
+          <div class="tl-head">
+            <h3>Mobile Developer Intern</h3>
+            <span class="tl-when">Jan 2025 — Mar 2025 · Onsite</span>
+          </div>
+          <div class="tl-org">Contributed to production-ready mobile applications, focused on performance, UI quality and clean modular code.</div>
+          <ul>
+            <li>Built a fully functional quiz app with animations, timer logic, a leaderboard and sound effects.</li>
+            <li>Developed an AI assistant app with task management, a news feed and adaptive UI interactions.</li>
+            <li>Extracted reusable components and reworked navigation, cutting duplicated screen code.</li>
+            <li>Worked day to day with React Native CLI, Tailwind CSS and current mobile UI patterns.</li>
+            <li>Collaborated in an agile team to deliver features under tight deadlines.</li>
           </ul>
-          <div class="mt-3">
-            <a class="btn btn-primary" href="assets/Roshan_Adhikari_CV.pdf" download>Download Resume</a>
-          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section section-bg">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Skills</h2>
-        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-          My expertise across frontend, backend, and other tech stacks.
-        </p>
-
-        <div class="row g-4 skills-content">
-          <!-- Column 1 -->
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-html5 me-2"></i>HTML</span><span>90%</span>
-              </div>
-              <div class="progress">
-                <span class="bar html" data-value="90"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-css3 me-2"></i>CSS</span><span>95%</span>
-              </div>
-              <div class="progress">
-                <span class="bar css" data-value="95"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-javascript me-2"></i>JavaScript</span><span>85%</span>
-              </div>
-              <div class="progress">
-                <span class="bar js" data-value="85"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-react me-2"></i>React Native</span><span>80%</span>
-              </div>
-              <div class="progress">
-                <span class="bar react" data-value="80"></span>
-              </div>
-            </div>
+      <div class="tl-item reveal" data-d="1">
+        <div class="tl-card">
+          <div class="tl-head">
+            <h3>Freelance &amp; personal projects</h3>
+            <span class="tl-when">2023 — present</span>
           </div>
-
-          <!-- Column 2 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-java me-2"></i>Java</span><span>85%</span>
-              </div>
-              <div class="progress">
-                <span class="bar java" data-value="85"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxl-python me-2"></i>Python</span><span>80%</span>
-              </div>
-              <div class="progress">
-                <span class="bar python" data-value="80"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bxs-file-code me-2"></i>C#</span><span>85%</span>
-              </div>
-              <div class="progress">
-                <span class="bar csharp" data-value="85"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="bx bx-server me-2"></i>System Administration</span><span>80%</span>
-              </div>
-              <div class="progress">
-                <span class="bar sysadmin" data-value="80"></span>
-              </div>
-            </div>
-          </div>
+          <div class="tl-org">Self-directed builds that doubled as my training ground for production habits.</div>
+          <ul>
+            <li>Designed and shipped three public projects across web, mobile and browser games.</li>
+            <li>Set up Git workflows, GitHub Pages deployments and issue-driven development.</li>
+            <li>Helped classmates debug builds and review code in study groups.</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section container">
-      <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
-      <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Selected work showcasing code quality and product thinking.</p>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-          <article class="project-card">
-            <div class="project-img">
-              <i class="bx bx-mobile-alt"></i>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Quiz App</h3>
-              <p class="project-desc">Frontend Quiz App with React Native and Tailwind CSS featuring animations, timer logic, and sound effects.</p>
-              <div class="badges">
-                <span>React Native</span><span>Tailwind CSS</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/Quiz-App" target="_blank">Code</a>
-                <a class="btn btn-outline-light btn-sm" href="https://drive.google.com/file/d/1rQACc7ZgPsUsdtRGShPQWFNJFJoqEjtG/view?usp=drive_link" target="_blank">Live</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <article class="project-card">
-            <div class="project-img">
-              <i class="bx bx-restaurant"></i>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Food Ordering System – FoodSathi</h3>
-              <p class="project-desc">
-                A modern and responsive food ordering template featuring dark mode, smooth AOS animations, and clean UI/UX with SEO-optimized structure.
-              </p>
-              <div class="badges">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn-primary btn-sm" href="https://github.com/RoshanAdhikari10/FoodSathi" target="_blank">Code</a>
-                <a class="btn btn-outline-light btn-sm" href="https://roshanadhikari10.github.io/FoodSathi/" target="_blank">Live</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <article class="project-card">
-            <div class="project-img icon-box">
-              <i class="bx bx-joystick"></i>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Ping Pong Game</h3>
-              <p class="project-desc">
-                A fast, smooth and interactive classic Pong game built using HTML, CSS, and JavaScript with sound effects and AI opponent.
-              </p>
-              <div class="badges">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn-primary btn-sm" href="https://github.com/roshanadhikari10/ping-pong-game" target="_blank">
-                  Code
-                </a>
-                <a class="btn btn-outline-light btn-sm" href="https://roshanadhikari10.github.io/Ping-pong-game/" target="_blank">
-                  Live
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section section-bg">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Mobile Developer Intern</h3>
-              <span class="time">Jan 2025 – Mar 2025 • Onsite</span>
-              <p>Contributed to the design and development of production-ready mobile applications, focusing on performance, UI/UX quality, and clean modular code.</p>
-              <ul>
-                <li>Built a fully functional Quiz App with animations, timer logic, leaderboard, and sound effects.</li>
-                <li>Developed an AI Assistant App with task management, news feed, and intelligent UI interactions.</li>
-                <li>Implemented reusable components, optimized navigation, and improved user experience.</li>
-                <li>Worked with React Native CLI, Tailwind CSS, and modern mobile UI patterns.</li>
-                <li>Collaborated in an agile environment to deliver features under tight deadlines.</li>
-              </ul>
-            </div>
+      <div class="tl-item reveal" data-d="2">
+        <div class="tl-card">
+          <div class="tl-head">
+            <h3>BSc. Information Technology</h3>
+            <span class="tl-when">2021 — 2025</span>
           </div>
+          <div class="tl-org">Pokhara, Nepal</div>
+          <ul>
+            <li>Core coursework in programming, databases, networking and software engineering.</li>
+            <li>Final-year work centred on mobile application development and user interface design.</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="section container">
-      <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Contact</h2>
-        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Let's build something great. I'm quick on replies.</p>
+<!-- ============ PROCESS ============ -->
+<section id="process" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">How I work</div>
+      <h2>From first message to launch</h2>
+      <p>The same four steps whether it's a landing page or a full app — so you always know what happens next.</p>
+    </div>
+    <div class="process">
+      <div class="step reveal"><div class="n mono">01</div><h3>Understand</h3><p>We talk through the goal, the users and the deadline before a single file is created.</p></div>
+      <div class="step reveal" data-d="1"><div class="n mono">02</div><h3>Plan</h3><p>Structure, screens and data flow get sketched, so surprises surface early instead of late.</p></div>
+      <div class="step reveal" data-d="2"><div class="n mono">03</div><h3>Build</h3><p>Small, reviewable commits with working previews you can click through as it comes together.</p></div>
+      <div class="step reveal" data-d="3"><div class="n mono">04</div><h3>Ship</h3><p>Testing on real devices, a deploy, and a handover doc so anyone can pick it up later.</p></div>
+    </div>
+  </div>
+</section>
 
-        <div class="row g-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-5">
-            <div class="contact-card">
-              <div class="row g-3">
-                <div class="col-12"><i class="bx bx-current-location me-2"></i>Pokhara-13, Nepal</div>
-                <div class="col-12"><i class="bx bx-envelope me-2"></i>chhetrirosun@gmail.com</div>
-                <div class="col-12"><i class="bx bx-phone me-2"></i>+977-9766009112</div>
-              </div>
-              <div class="d-flex gap-2 mt-3 flex-wrap">
-                <a class="btn btn-primary" href="https://wa.me/9779766009112" target="_blank"><i class="bx bxl-whatsapp me-1"></i>WhatsApp</a>
-                <a class="btn btn-outline-light" href="assets/Roshan_Adhikari_CV.pdf" download><i class="bx bx-download me-1"></i>Resume</a>
-              </div>
-              <div class="map mt-3">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d205.71011684671976!2d84.0511278392731!3d28.221621438983547!2m3!1f180!2f0!3f0!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2snp!4v1728823691577!5m2!1sen!2snp" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="contact-form-container">
-              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                <input type="hidden" name="access_key" value="11c07a38-cb35-4475-aaa6-1501560eeeb4" />
-
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required />
-
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required />
-
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-                <div id="form-status" role="status" aria-live="polite"></div>
-              </form>
-            </div>
-          </div>
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Let's build something great</h2>
+      <p>I'm quick on replies — reach out directly or send the form and I'll answer within a day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card glass reveal">
+        <span class="corner-tag"></span><span class="corner-tag br"></span>
+        <div class="contact-row"><i class='bx bx-current-location'></i><div><div class="k">Location</div><div class="v">Pokhara-13, Nepal</div></div></div>
+        <div class="contact-row"><i class='bx bx-envelope'></i><div><div class="k">Email</div><div class="v">chhetrirosun@gmail.com <button class="copy-btn" data-copy="chhetrirosun@gmail.com" aria-label="Copy email"><i class='bx bx-copy'></i></button></div></div></div>
+        <div class="contact-row"><i class='bx bx-phone'></i><div><div class="k">Phone</div><div class="v">+977-9766009112 <button class="copy-btn" data-copy="+9779766009112" aria-label="Copy phone"><i class='bx bx-copy'></i></button></div></div></div>
+        <div class="contact-row"><i class='bx bx-time-five'></i><div><div class="k">Response time</div><div class="v">Usually within 24 hours</div></div></div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://wa.me/9779766009112" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+          <a class="btn btn-ghost" href="assets/Roshan_Adhikari_CV.pdf" download><i class='bx bx-download'></i> Resume</a>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="mb-0">&copy; <span id="year"></span> Roshan Adhikari • All rights reserved.</p>
+      <div class="form-card glass reveal" data-d="1">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="11c07a38-cb35-4475-aaa6-1501560eeeb4" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+          <div class="form-2">
+            <div class="form-row"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Jane Cooper" required /><span class="err"></span></div>
+            <div class="form-row"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="jane@company.com" required /><span class="err"></span></div>
+          </div>
+          <div class="form-row"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="A role, a project, or a question" required /><span class="err"></span></div>
+          <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me what you're building…" required></textarea><span class="err"></span></div>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
       </div>
-    </footer>
-  </main>
+    </div>
+  </div>
+</section>
 
-  <a href="#" class="back-to-top" aria-label="Back to top">
-    <i class="bx bx-chevron-up"></i>
-  </a>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#hero" class="logo scrollto"><span class="mark mark-photo"><img src="assets/roshan-avatar.webp" alt="Roshan Adhikari" width="44" height="44" onerror="this.onerror=null;this.src='assets/roshan-avatar.jpg'" /></span><span class="full-name">Roshan Adhikari<span>Web &amp; Mobile Dev</span></span></a>
+        <p>Building websites and Android apps from Pokhara, Nepal. Currently open to full-time and freelance work.</p>
+        <div class="f-social">
+          <a href="https://github.com/RoshanAdhikari10" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/roshan-adhikari-80b883320/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.instagram.com/chhetri.rosun/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="https://www.facebook.com/chhetri.rosun" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <div class="foot-links">
+          <a href="#about" class="scrollto">About</a>
+          <a href="#services" class="scrollto">Services</a>
+          <a href="#skills" class="scrollto">Skills</a>
+          <a href="#projects" class="scrollto">Projects</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="foot-links">
+          <a href="https://github.com/RoshanAdhikari10" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/roshan-adhikari-80b883320/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:chhetrirosun@gmail.com">Email me</a>
+          <a href="assets/Roshan_Adhikari_CV.pdf" download>Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; <span id="year"></span> Roshan Adhikari. All rights reserved.</p>
+      <p class="mono">Built with HTML, CSS, JavaScript &amp; Three.js</p>
+    </div>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<a href="#hero" class="back-to-top scrollto" aria-label="Back to top"><i class='bx bx-chevron-up'></i></a>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
